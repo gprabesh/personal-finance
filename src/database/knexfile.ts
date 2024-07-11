@@ -1,4 +1,4 @@
-import type { Knex, knex } from "knex";
+import { Knex, knex } from "knex";
 import dotenv from "dotenv";
 
 dotenv.config({ path: "../../.env" });
@@ -22,4 +22,5 @@ const knexConfig: { [key: string]: Knex.Config } = {
     },
   },
 };
-export default knexConfig;
+const db = knex(knexConfig.development);
+export default db;

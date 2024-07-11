@@ -1,7 +1,5 @@
 import express from "express";
 import dotenv from "dotenv";
-import knex from "knex";
-import knexConfig from "./database/knexfile";
 import defaultRoutes from "./routes/defaultRoutes";
 import cors from "cors";
 import helmet from "helmet";
@@ -15,7 +13,6 @@ const options: cors.CorsOptions = {
 const app = express();
 app.use(cors(options));
 app.use(helmet());
-const db = knex(knexConfig.development);
 app.use(express.json());
 
 app.use("/", defaultRoutes);
