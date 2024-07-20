@@ -1,9 +1,7 @@
-export interface User {
+export interface AccountGroup {
     id: number
     name: string
-    email: string
-    username: string
-    password: string
+    code: string
     created_at: Date
     updated_at: Date | null
     status: number
