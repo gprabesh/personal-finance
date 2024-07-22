@@ -6,7 +6,7 @@
         "start": "node dist/index.js",
         "build": "tsc",
         "dev": "nodemon",
-        "knex": "knex --knexfile src/database/knexfile.ts",
+        "knex": "dotenv -- knex --knexfile src/database/knexfile.ts",
         "pretty": "prettier --config .prettierrc 'src/**/*.ts' --write"
     },
     "engines": {
@@ -24,6 +24,7 @@
         "bcrypt": "^5.1.1",
         "cors": "^2.8.5",
         "dotenv": "^16.4.5",
+        "dotenv-cli": "^7.4.2",
         "express": "^4.19.2",
         "helmet": "^7.1.0",
         "jsonwebtoken": "^9.0.2",
